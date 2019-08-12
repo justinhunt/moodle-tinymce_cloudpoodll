@@ -49,11 +49,19 @@ $string['subtitlebydefault_details']='If true Cloud Poodll will check subtitling
 
 $string['language']='Transcription language';
 $string['speakerlanguage']='Speaker language';
-$string['en-us']='English(US)';
-$string['en-au']='English(AU)';
-$string['en-uk']='English(UK)';
-$string['es-us']='Spanish(US)';
-$string['fr-ca']='French(CA)';
+$string['en-us'] = 'English (US)';
+$string['en-uk'] = 'English (UK)';
+$string['en-au'] = 'English (AU)';
+$string['en-in'] = 'English (IN)';
+$string['es-es'] = 'Spanish (ES)';
+$string['es-us'] = 'Spanish (US)';
+$string['fr-fr'] = 'French (FR.)';
+$string['fr-ca'] = 'French (CA)';
+$string['ko-kr'] = 'Korean(KR)';
+$string['pt-br'] = 'Portuguese(BR)';
+$string['it-it'] = 'Italian(IT)';
+$string['de-de'] = 'German(DE)';
+$string['hi-in'] = 'Hindi(IN)';
 
 $string['uploadinstructions']='Drag and drop, or choose a media file, to upload it.';
 

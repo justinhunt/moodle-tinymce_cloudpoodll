@@ -549,6 +549,7 @@ M.tinymce_cloudpoodll = M.tinymce_cloudpoodll || {
         YUI().use('handlebars', 'node-base', function (newyui) {
             var content = newyui.Handlebars.compile(template)(context);
             //only links work in tinymce because audio and video tags are not set int extended_valid_elements in Moodle
+            //TODO in /lib/editor/tinymce/module.js add this options.extended_valid_elements ="audio[controls|preload|width|height|data-setup],video[controls|preload|width|height|data-setup],source[src|type]"
             tinyMCEPopup.editor.execCommand('mceInsertContent', false, content);
             tinyMCEPopup.close();
         });
