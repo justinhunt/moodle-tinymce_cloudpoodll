@@ -1,5 +1,7 @@
 Change List
 =========
+Version XXX
+-Added better reporting to user of invalid API creds
 
 Version 1.0.0(Build 2018111000)
 -First release of CloudPoodll for TinyMCE

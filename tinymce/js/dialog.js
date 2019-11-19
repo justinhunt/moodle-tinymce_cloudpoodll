@@ -67,7 +67,7 @@ var STATE ={
     subitlevideobydefault: 0,
     elementid: false,
     subtitlecheckbox: false,
-}
+};
 
 var TEMPLATES = {
     ROOT: '' +
@@ -392,7 +392,15 @@ M.tinymce_cloudpoodll = M.tinymce_cloudpoodll || {
         var that=this;
         var thecontext=this._getContext();
         YUI().use('handlebars', 'node-base', function (newyui) {
-           var content = newyui.Node.create(newyui.Handlebars.compile(TEMPLATES.ROOT)(thecontext));
+
+            var output = '';
+            if(CLOUDPOODLL.token ==''){
+                output= M.util.get_string('notoken', COMPONENTNAME);
+            }else{
+                output = newyui.Handlebars.compile(TEMPLATES.ROOT)(thecontext);
+            }
+           var content = newyui.Node.create(output);
+
             Y.one('body').append(content);
 
                //store some common elements we will refer to later

@@ -50,7 +50,8 @@ class tinymce_cloudpoodll extends editor_tinymce_plugin {
 
         $PAGE->requires->strings_for_js(
             array('createaudio','createvideo','insert','cancel','audio','video','upload','subtitle','options','subtitlecheckbox',
-                'mediainsertcheckbox','subtitleinstructions','audio_desc','video_desc','en-us','es-us','speakerlanguage','uploadinstructions'), constants::M_COMPONENT);
+                'mediainsertcheckbox','subtitleinstructions','audio_desc','video_desc','en-us','es-us',
+                    'speakerlanguage','uploadinstructions','notoken'), constants::M_COMPONENT);
 
 
         //use tinymce/poodll:visible capability
