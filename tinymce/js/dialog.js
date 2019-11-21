@@ -34,7 +34,7 @@
 var COMPONENTNAME = 'tinymce_cloudpoodll';
 var RECORDERS = {VIDEO: 'video', AUDIO: 'audio'};
 var INSERTMETHOD = {LINK: 'link', TAGS: 'tags'};
-var LANGUAGE = {ENUS: 'en-US',ENUK: 'en-UK',ENAU: 'en-AU',ENIN: 'en-IN',FRCA: 'fr-CA',FRFR: 'fr-FR', ESUS: 'es-US', ESES: 'es-ES',ITIT: 'it-IT', PTBR: 'pt-BR', DEDE: 'de-DE', KOKR: 'ko-KR', HIIN: 'hi-IN'};
+var LANGUAGE = {ENUS: 'en-US',ENUK: 'en-GB',ENAU: 'en-AU',ENIN: 'en-IN',FRCA: 'fr-CA',FRFR: 'fr-FR', ESUS: 'es-US', ESES: 'es-ES',ITIT: 'it-IT', PTBR: 'pt-BR', DEDE: 'de-DE', KOKR: 'ko-KR', HIIN: 'hi-IN'};
 var CLOUDPOODLL = {};
 var SKIN = {PLAIN: 'standard',
     BMR: 'bmr',
