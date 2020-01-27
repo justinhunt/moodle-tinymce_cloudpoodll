@@ -48,10 +48,36 @@ const SKIN_FRESH = 'fresh';
 const SKIN_ONCE = 'once';
 
 const LANG_ENUS = 'en-US';
-const LANG_ENUK = 'en-GB';
+const LANG_ENGB = 'en-GB';
 const LANG_ENAU = 'en-AU';
 const LANG_ESUS = 'es-US';
 const LANG_FRCA = 'fr-CA';
+const LANG_FRFR = 'fr-FR';
+const LANG_ITIT = 'it-IT';
+const LANG_PTBR = 'pt-BR';
+const LANG_KOKR = 'ko-KR';
+const LANG_DEDE = 'de-DE';
+const LANG_HIIN = 'hi-IN';
+const LANG_ENIN = 'en-IN';
+const LANG_ESES = 'es-ES';
+const LANG_ARAE ='ar-AE';
+const LANG_ARSA ='ar-SA';
+const LANG_ZHCN ='zh-CN';
+const LANG_NLNL ='nl-NL';
+const LANG_ENIE ='en-IE';
+const LANG_ENWL ='en-WL';
+const LANG_ENAB ='en-AB';
+const LANG_FAIR ='fa-IR';
+const LANG_DECH ='de-CH';
+const LANG_HEIL ='he-IL';
+const LANG_IDID ='id-ID';
+const LANG_JAJP ='ja-JP';
+const LANG_MSMY ='ms-MY';
+const LANG_PTPT ='pt-PT';
+const LANG_RURU ='ru-RU';
+const LANG_TAIN ='ta-IN';
+const LANG_TEIN ='te-IN';
+const LANG_TRTR ='tr-TR';
 
 const INSERT_LINK = 'link';
 const INSERT_TAGS = 'tags';
@@ -74,5 +100,7 @@ const REGION_OTTAWA = 'ottawa';
 const REGION_SAOPAULO = 'saopaulo';
 const REGION_FRANKFURT = 'frankfurt';
 const REGION_LONDON = 'london';
+const REGION_SINGAPORE = 'singapore';
+const REGION_MUMBAI = 'mumbai';
 
 }

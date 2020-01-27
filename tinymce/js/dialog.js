@@ -34,7 +34,38 @@
 var COMPONENTNAME = 'tinymce_cloudpoodll';
 var RECORDERS = {VIDEO: 'video', AUDIO: 'audio'};
 var INSERTMETHOD = {LINK: 'link', TAGS: 'tags'};
-var LANGUAGE = {ENUS: 'en-US',ENUK: 'en-GB',ENAU: 'en-AU',ENIN: 'en-IN',FRCA: 'fr-CA',FRFR: 'fr-FR', ESUS: 'es-US', ESES: 'es-ES',ITIT: 'it-IT', PTBR: 'pt-BR', DEDE: 'de-DE', KOKR: 'ko-KR', HIIN: 'hi-IN'};
+var LANGUAGE = {   ENUS: 'en-US',
+    ENGB: 'en-GB',
+    ENAU: 'en-AU',
+    ENIN: 'en-IN',
+    FRCA: 'fr-CA',
+    FRFR: 'fr-FR',
+    ESUS: 'es-US',
+    ESES: 'es-ES',
+    ITIT: 'it-IT',
+    PTBR: 'pt-BR',
+    DEDE: 'de-DE',
+    KOKR: 'ko-KR',
+    HIIN: 'hi-IN',
+    ARAE: 'ar-AE',
+    ARSA: 'ar-SA',
+    ZHCN: 'zh-CN',
+    NLNL: 'nl-NL',
+    ENIE: 'en-IE',
+    ENWL: 'en-WL',
+    ENAB: 'en-AB',
+    FAIR: 'fa-IR',
+    DECH: 'de-CH',
+    HEIL: 'he-IL',
+    IDID: 'id-ID',
+    JAJP: 'ja-JP',
+    MSMY: 'ms-MY',
+    PTPT: 'pt-PT',
+    RURU: 'ru-RU',
+    TAIN: 'ta-IN',
+    TEIN: 'te-IN',
+    TRTR: 'tr-TR'};
+
 var CLOUDPOODLL = {};
 var SKIN = {PLAIN: 'standard',
     BMR: 'bmr',
@@ -156,19 +187,36 @@ var TEMPLATES = {
     '</label>' +
     '<br><label>{{get_string "speakerlanguage" component}}&nbsp;' +
     '<select id="{{elementid}}_{{CSS.LANG_SELECT}}" class="{{CSS.LANG_SELECT}}">' +
+    '<option value="{{LANG.ARAE}}" {{#if useARAE}}selected="selected"{{/if}}>{{get_string "ar-ae" component}}</option>' +
+    '<option value="{{LANG.ARSA}}" {{#if useARSA}}selected="selected"{{/if}}>{{get_string "ar-sa" component}}</option>' +
+    '<option value="{{LANG.DEDE}}" {{#if useDEDE}}selected="selected"{{/if}}>{{get_string "de-de" component}}</option>' +
+    '<option value="{{LANG.DECH}}" {{#if useDECH}}selected="selected"{{/if}}>{{get_string "de-ch" component}}</option>' +
     '<option value="{{LANG.ENUS}}" {{#if useENUS}}selected="selected"{{/if}}>{{get_string "en-us" component}}</option>' +
-    '<option value="{{LANG.ENUK}}" {{#if useENUK}}selected="selected"{{/if}}>{{get_string "en-uk" component}}</option>' +
+    '<option value="{{LANG.ENGB}}" {{#if useENGB}}selected="selected"{{/if}}>{{get_string "en-gb" component}}</option>' +
     '<option value="{{LANG.ENAU}}" {{#if useENAU}}selected="selected"{{/if}}>{{get_string "en-au" component}}</option>' +
     '<option value="{{LANG.ENIN}}" {{#if useENIN}}selected="selected"{{/if}}>{{get_string "en-in" component}}</option>' +
+    '<option value="{{LANG.ENIE}}" {{#if useENIE}}selected="selected"{{/if}}>{{get_string "en-ie" component}}</option>' +
+    '<option value="{{LANG.ENWL}}" {{#if useENWL}}selected="selected"{{/if}}>{{get_string "en-wl" component}}</option>' +
+    '<option value="{{LANG.ENAB}}" {{#if useENAB}}selected="selected"{{/if}}>{{get_string "en-ab" component}}</option>' +
     '<option value="{{LANG.ESUS}}" {{#if useESUS}}selected="selected"{{/if}}>{{get_string "es-us" component}}</option>' +
     '<option value="{{LANG.ESES}}" {{#if useESES}}selected="selected"{{/if}}>{{get_string "es-es" component}}</option>' +
+    '<option value="{{LANG.FAIR}}" {{#if useFAIR}}selected="selected"{{/if}}>{{get_string "fa-ir" component}}</option>' +
     '<option value="{{LANG.FRFR}}" {{#if useFRFR}}selected="selected"{{/if}}>{{get_string "fr-fr" component}}</option>' +
     '<option value="{{LANG.FRCA}}" {{#if useFRCA}}selected="selected"{{/if}}>{{get_string "fr-ca" component}}</option>' +
-    '<option value="{{LANG.ITIT}}" {{#if useITIT}}selected="selected"{{/if}}>{{get_string "it-it" component}}</option>' +
-    '<option value="{{LANG.PTBR}}" {{#if usePTBR}}selected="selected"{{/if}}>{{get_string "pt-br" component}}</option>' +
-    '<option value="{{LANG.KOKR}}" {{#if useKOKR}}selected="selected"{{/if}}>{{get_string "ko-kr" component}}</option>' +
-    '<option value="{{LANG.DEDE}}" {{#if useDEDE}}selected="selected"{{/if}}>{{get_string "de-de" component}}</option>' +
+    '<option value="{{LANG.HEIL}}" {{#if useHEIL}}selected="selected"{{/if}}>{{get_string "he-il" component}}</option>' +
     '<option value="{{LANG.HIIN}}" {{#if useHIIN}}selected="selected"{{/if}}>{{get_string "hi-in" component}}</option>' +
+    '<option value="{{LANG.ITIT}}" {{#if useITIT}}selected="selected"{{/if}}>{{get_string "it-it" component}}</option>' +
+    '<option value="{{LANG.JAJP}}" {{#if useJAJP}}selected="selected"{{/if}}>{{get_string "ja-jp" component}}</option>' +
+    '<option value="{{LANG.KOKR}}" {{#if useKOKR}}selected="selected"{{/if}}>{{get_string "ko-kr" component}}</option>' +
+    '<option value="{{LANG.MSMY}}" {{#if useMSMY}}selected="selected"{{/if}}>{{get_string "ms-my" component}}</option>' +
+    '<option value="{{LANG.NLNL}}" {{#if useNLNL}}selected="selected"{{/if}}>{{get_string "nl-nl" component}}</option>' +
+    '<option value="{{LANG.PTPT}}" {{#if usePTPT}}selected="selected"{{/if}}>{{get_string "pt-pt" component}}</option>' +
+    '<option value="{{LANG.PTBR}}" {{#if usePTBR}}selected="selected"{{/if}}>{{get_string "pt-br" component}}</option>' +
+    '<option value="{{LANG.RURU}}" {{#if useRURU}}selected="selected"{{/if}}>{{get_string "ru-ru" component}}</option>' +
+    '<option value="{{LANG.TAIN}}" {{#if useTAIN}}selected="selected"{{/if}}>{{get_string "ta-in" component}}</option>' +
+    '<option value="{{LANG.TEIN}}" {{#if useTEIN}}selected="selected"{{/if}}>{{get_string "te-in" component}}</option>' +
+    '<option value="{{LANG.TRTR}}" {{#if useTRTR}}selected="selected"{{/if}}>{{get_string "tr-tr" component}}</option>' +
+    '<option value="{{LANG.ZHCN}}" {{#if useZHCN}}selected="selected"{{/if}}>{{get_string "zh-cn" component}}</option>' +
     '</select>' +
     '</label>' +
     '<br>{{get_string "subtitleinstructions" component}}' +
@@ -232,6 +280,7 @@ M.tinymce_cloudpoodll = M.tinymce_cloudpoodll || {
         //set up the cloudpoodll div
         CLOUDPOODLL.parent = config.cp_wwwroot;
         CLOUDPOODLL.appid = 'tinymce_cloudpoodll';
+        CLOUDPOODLL.owner = config.cp_owner;
         CLOUDPOODLL.token = config.cp_token;
         CLOUDPOODLL.region = config.cp_region;
         CLOUDPOODLL.expiredays = config.cp_expiredays;
@@ -269,10 +318,36 @@ M.tinymce_cloudpoodll = M.tinymce_cloudpoodll || {
                 letssubtitleaudio: STATE.subtitleaudiobydefault ===1,
                 letssubtitlevideo: STATE.subtitlevideobydefault ===1,
                 useENUS: CLOUDPOODLL.language === LANGUAGE.ENUS,
-                useENUK: CLOUDPOODLL.language === LANGUAGE.ENUK,
+                useENGB: CLOUDPOODLL.language === LANGUAGE.ENGB,
                 useENAU: CLOUDPOODLL.language === LANGUAGE.ENAU,
+                useENIN: CLOUDPOODLL.language === LANGUAGE.ENIN,
                 useFRCA: CLOUDPOODLL.language === LANGUAGE.FRCA,
+                useFRFR: CLOUDPOODLL.language === LANGUAGE.FRFR,
                 useESUS: CLOUDPOODLL.language === LANGUAGE.ESUS,
+                useESES: CLOUDPOODLL.language === LANGUAGE.ESES,
+                useITIT: CLOUDPOODLL.language === LANGUAGE.ITIT,
+                usePTBR: CLOUDPOODLL.language === LANGUAGE.PTBR,
+                useDEDE: CLOUDPOODLL.language === LANGUAGE.DEDE,
+                useKOKR: CLOUDPOODLL.language === LANGUAGE.KOKR,
+                useHIIN: CLOUDPOODLL.language === LANGUAGE.HIIN,
+                useARAE: CLOUDPOODLL.language === LANGUAGE.ARAE,
+                useARSA: CLOUDPOODLL.language === LANGUAGE.ARSA,
+                useZHCN: CLOUDPOODLL.language === LANGUAGE.ZHCN,
+                useNLNL: CLOUDPOODLL.language === LANGUAGE.NLNL,
+                useENIE: CLOUDPOODLL.language === LANGUAGE.ENIE,
+                useENWL: CLOUDPOODLL.language === LANGUAGE.ENWL,
+                useENAB: CLOUDPOODLL.language === LANGUAGE.ENAB,
+                useFAIR: CLOUDPOODLL.language === LANGUAGE.FAIR,
+                useDECH: CLOUDPOODLL.language === LANGUAGE.DECH,
+                useHEIL: CLOUDPOODLL.language === LANGUAGE.HEIL,
+                useIDID: CLOUDPOODLL.language === LANGUAGE.IDID,
+                useJAJP: CLOUDPOODLL.language === LANGUAGE.JAJP,
+                useMSMY: CLOUDPOODLL.language === LANGUAGE.MSMY,
+                usePTPT: CLOUDPOODLL.language === LANGUAGE.PTPT,
+                useRURU: CLOUDPOODLL.language === LANGUAGE.RURU,
+                useTAIN: CLOUDPOODLL.language === LANGUAGE.TAIN,
+                useTEIN: CLOUDPOODLL.language === LANGUAGE.TEIN,
+                useTRTR: CLOUDPOODLL.language === LANGUAGE.TRTR,
                 CSS: CSS,
                 CP: CLOUDPOODLL,
                 LANG: LANGUAGE

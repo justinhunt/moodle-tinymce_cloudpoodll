@@ -46,12 +46,21 @@ class tinymce_cloudpoodll extends editor_tinymce_plugin {
     protected function update_init_params(array &$params, context $context,
                                           array $options = null) {
 
-        global $CFG, $PAGE;
+        global $CFG, $PAGE,$USER;
 
-        $PAGE->requires->strings_for_js(
-            array('createaudio','createvideo','insert','cancel','audio','video','upload','subtitle','options','subtitlecheckbox',
-                'mediainsertcheckbox','subtitleinstructions','audio_desc','video_desc','en-us','es-us',
-                    'speakerlanguage','uploadinstructions','notoken'), constants::M_COMPONENT);
+        $langstrings=[];
+        foreach(utils::get_lang_options() as $key=>$value){
+            $langstrings[]= strtolower($key);
+
+        };
+
+        $otherstrings =array('createaudio','createvideo','insert','cancel','audio','video','upload','subtitle','options','subtitlecheckbox',
+                'mediainsertcheckbox','subtitleinstructions','audio_desc','video_desc',
+                'speakerlanguage','uploadinstructions','notoken');
+
+        $strings = array_merge($langstrings ,$otherstrings);
+
+        $PAGE->requires->strings_for_js($strings, constants::M_COMPONENT);
 
 
         //use tinymce/poodll:visible capability
@@ -85,6 +94,7 @@ class tinymce_cloudpoodll extends editor_tinymce_plugin {
         $cp_params['cp_cansubtitle'] = $cansubtitle;
         $cp_params['cp_token'] = utils::fetch_token($config->apiuser,$config->apisecret);
         $cp_params['cp_region'] = $config->awsregion;
+        $cp_params['cp_owner'] = hash('md5',$USER->username);
         $cp_params['cp_language'] = $config->language;
         $cp_params['cp_expiredays'] = $config->expiredays;
         $cp_params['cp_transcode'] = "1";

@@ -65,6 +65,25 @@ $string['it-it'] = 'Italian(IT)';
 $string['de-de'] = 'German(DE)';
 $string['hi-in'] = 'Hindi(IN)';
 
+$string['ar-ae'] = 'Arabic (Gulf)';
+$string['ar-sa'] = 'Arabic (Modern Standard)';
+$string['zh-cn'] = 'Chinese (Mandarin-Mainland)';
+$string['nl-nl'] = 'Dutch';
+$string['en-ie'] = 'English (Ireland)';
+$string['en-wl'] = 'English (Wales)';
+$string['en-ab'] = 'English (Scotland)';
+$string['fa-ir'] = 'Farsi';
+$string['de-ch'] = 'German (Swiss)';
+$string['he-il'] = 'Hebrew';
+$string['id-id'] = 'Indonesian';
+$string['ja-jp'] = 'Japanese';
+$string['ms-my'] = 'Malay';
+$string['pt-pt'] = 'Portuguese (PT)';
+$string['ru-ru'] = 'Russian';
+$string['ta-in'] = 'Tamil';
+$string['te-in'] = 'Telegu';
+$string['tr-tr'] = 'Turkish';
+
 $string['uploadinstructions'] = 'Drag and drop, or choose a media file, to upload it.';
 
 $string['insertmethod'] = 'Insert method';
@@ -91,6 +110,9 @@ $string['ottawa'] = 'Ottawa, Canada (slow)';
 $string['frankfurt'] = 'Frankfurt, Germany (slow, no subtitling)';
 $string['london'] = 'London, U.K (slow, no subtitling)';
 $string['saopaulo'] = 'Sao Paulo, Brazil (slow, no subtitling)';
+$string['singapore']='Singapore';
+$string['mumbai']='Mumbai, India';
+
 $string['forever'] = 'Never expire';
 $string['awsregion'] = 'AWS Region';
 $string['region'] = 'AWS Region';
