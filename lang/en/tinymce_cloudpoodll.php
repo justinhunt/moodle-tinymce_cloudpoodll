@@ -112,6 +112,8 @@ $string['london'] = 'London, U.K (slow, no subtitling)';
 $string['saopaulo'] = 'Sao Paulo, Brazil (slow, no subtitling)';
 $string['singapore']='Singapore';
 $string['mumbai']='Mumbai, India';
+$string['capetown'] = 'Capetown, South Africa';
+$string['bahrain'] = 'Bahrain';
 
 $string['forever'] = 'Never expire';
 $string['awsregion'] = 'AWS Region';

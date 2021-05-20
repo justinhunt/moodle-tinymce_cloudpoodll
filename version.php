@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 // The current plugin version (Date: YYYYMMDDXX).
-$plugin->version   = 2020012500;
+$plugin->version   = 2020052000;
 $plugin->requires  = 2015051100;// Requires Moodle version 2.9 or greater
 $plugin->component = 'tinymce_cloudpoodll';
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.0.2(Build 2020012500)';
+$plugin->release   = '1.0.3 (Build 2020052000)';
