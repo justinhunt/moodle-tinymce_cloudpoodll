@@ -229,7 +229,7 @@ var TEMPLATES = {
     HTML_MEDIA: {
         VIDEO: '' +
         '&nbsp;<video ' +
-        'controls="true" crossorigin="anonymous"' +
+        'controls="true" crossorigin="anonymous" preload="metadata"' +
         '>' +
         "{{#if includesourcetrack}}" +
         '<source src="{{sourceurl}}" type="{{sourcemimetype}}">'+
@@ -241,7 +241,7 @@ var TEMPLATES = {
         '</video>&nbsp;',
         AUDIO: '' +
         '&nbsp;<audio ' +
-        'controls="true" crossorigin="anonymous"' +
+        'controls="true" crossorigin="anonymous" preload="metadata"' +
         '>' +
         "{{#if includesourcetrack}}" +
         '<source src="{{sourceurl}}" type="{{sourcemimetype}}">'+
