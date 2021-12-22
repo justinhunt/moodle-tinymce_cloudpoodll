@@ -35,6 +35,7 @@ const M_COMPONENT='tinymce_cloudpoodll';
 const M_TABLE='tinymce_cpoodll';
 const M_SUBPLUGIN='cloudpoodll';
 const M_ROOT = "/lib/editor/tinymce/plugins/cloudpoodll";
+const M_URL='lib/editor/tinymce/plugins/cloudpoodll';
 
 const APPID='tinymce_cloudpoodll';
 
