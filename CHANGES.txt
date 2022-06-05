@@ -1,5 +1,9 @@
 Change List
 =========
+Version 1.0.7 (Build 2022060500)
+- Changed AMD build steps
+- Change free trial jump link
+
 Version 1.0.6 (Build 2022030100)
 - forced video rec on iOS to get new code from cloudpoodll
 
@@ -13,7 +17,7 @@ Version 1.0.3 (Build 2021052000)
 - added regions bahrain and capetown
 
 Version 1.0.2(Build 2020012500)
--added languages(arabic, chinese, portuguese, japanese, tamil, telegu, dutch, farsi, wales english, ireland english, scotland english, russian, turkish, malay, indonesian,hebrew, swiss german)
+-added languages(arabic, chinese, portuguese, japanese, tamil, Telugu, dutch, farsi, wales english, ireland english, scotland english, russian, turkish, malay, indonesian,hebrew, swiss german)
 -added user tagging
 
 Version 1.0.1(Build 2019112100)

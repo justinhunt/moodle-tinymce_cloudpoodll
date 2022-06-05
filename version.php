@@ -29,4 +29,4 @@ $plugin->version   = 2022030100;
 $plugin->requires  = 2015051100;// Requires Moodle version 2.9 or greater
 $plugin->component = 'tinymce_cloudpoodll';
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.0.6 (Build 2022030100)';
+$plugin->release   = '1.0.7 (Build 2022060500)';
