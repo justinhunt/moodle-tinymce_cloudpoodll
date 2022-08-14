@@ -32,8 +32,13 @@ require_once(dirname(__FILE__).'/lib.php');
 $contextid = required_param('contextid', PARAM_INT);
 
 list($context, $course, $cm) = get_context_info_array($contextid);
+
+//it was necessary to remove the course / cm  information becusae on M4.0 (and earlier ..?)
+// the activity description was printed with $output->header().
+// Tried all sorts of stuff to tell it not to, and in the end this was all that worked. J 2022/08/14
 //require_login($course, false, $cm);
 require_login();
+
 require_sesskey();
 
 $PAGE->set_context($context);
