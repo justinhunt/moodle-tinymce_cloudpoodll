@@ -35,7 +35,7 @@ list($context, $course, $cm) = get_context_info_array($contextid);
 require_login($course, false, $cm);
 require_sesskey();
 
-$PAGE->set_context($context);
+//$PAGE->set_context($context);
 $PAGE->set_url(constants::M_ROOT .'/cloudpoodll.php');
 $PAGE->set_cacheable(false);
 $title = '';
@@ -47,6 +47,7 @@ $PAGE->set_heading($title);
 
 // Reset page layout for inside editor.
 $PAGE->set_pagelayout('embedded');
+//$PAGE->layout_options['noactivityheader']=true;
 
 $PAGE->requires->css(new moodle_url($CFG->wwwroot. constants::M_ROOT  .'/tinymce/css/style.css'));
 //$PAGE->requires->js(new moodle_url($CFG->wwwroot. constants::M_ROOT  . '/tinymce/js/dialog.js'), true);
