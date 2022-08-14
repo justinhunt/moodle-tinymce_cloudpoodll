@@ -43,7 +43,7 @@ if (isset($cm->name)) {
     $title = $cm->name;
 }
 $PAGE->set_title($title);
-$PAGE->set_heading($title);
+//$PAGE->set_heading($title);
 
 // Reset page layout for inside editor.
 $PAGE->set_pagelayout('embedded');
@@ -68,9 +68,7 @@ $PAGE->requires->strings_for_js(array_keys($strings), constants::M_COMPONENT );
 
 $output = $PAGE->get_renderer(constants::M_COMPONENT);
 
-$header =  $output->header();
-$header .= $output->skip_link_target('maincontent');
-echo $header;
+echo $output->header();
 echo $output->render_scripts();
 
 echo $output->footer();
