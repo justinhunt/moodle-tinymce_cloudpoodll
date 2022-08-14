@@ -32,7 +32,8 @@ require_once(dirname(__FILE__).'/lib.php');
 $contextid = required_param('contextid', PARAM_INT);
 
 list($context, $course, $cm) = get_context_info_array($contextid);
-require_login($course, false, $cm);
+//require_login($course, false, $cm);
+require_login();
 require_sesskey();
 
 //$PAGE->set_context($context);
@@ -52,8 +53,7 @@ $PAGE->set_title($title);
 $PAGE->requires->css(new moodle_url($CFG->wwwroot. constants::M_ROOT  .'/tinymce/css/style.css'));
 //$PAGE->requires->js(new moodle_url($CFG->wwwroot. constants::M_ROOT  . '/tinymce/js/dialog.js'), true);
 
-$jsvars = array(
-);
+$jsvars = array();
 $PAGE->requires->data_for_js(constants::M_SUBPLUGIN, $jsvars);
 
 $jsmodule = array(
@@ -70,6 +70,4 @@ $PAGE->requires->strings_for_js(array_keys($strings), constants::M_COMPONENT );
 $output = $PAGE->get_renderer(constants::M_COMPONENT);
 echo $output->render_scripts();
 echo $OUTPUT->header();
-
-
 echo $OUTPUT->footer();
