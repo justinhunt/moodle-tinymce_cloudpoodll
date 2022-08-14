@@ -47,8 +47,7 @@ if (isset($cm->name)) {
 
 // Reset page layout for inside editor.
 $PAGE->set_pagelayout('embedded');
-$PAGE->set_title("Cloud Poodll");
-$PAGE->set_heading("-");
+$PAGE->set_title($title);
 
 $PAGE->requires->css(new moodle_url($CFG->wwwroot. constants::M_ROOT  .'/tinymce/css/style.css'));
 //$PAGE->requires->js(new moodle_url($CFG->wwwroot. constants::M_ROOT  . '/tinymce/js/dialog.js'), true);
@@ -69,8 +68,8 @@ $strings = $stringmanager->load_component_strings(constants::M_COMPONENT , $USER
 $PAGE->requires->strings_for_js(array_keys($strings), constants::M_COMPONENT );
 
 $output = $PAGE->get_renderer(constants::M_COMPONENT);
-
-echo $OUTPUT->header();
 echo $output->render_scripts();
+echo $OUTPUT->header();
+
 
 echo $OUTPUT->footer();
