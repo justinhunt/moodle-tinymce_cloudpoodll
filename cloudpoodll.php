@@ -35,8 +35,8 @@ list($context, $course, $cm) = get_context_info_array($contextid);
 require_login($course, false, $cm);
 require_sesskey();
 
-//$PAGE->set_context($context);
-$PAGE->set_context(context_system::instance());
+$PAGE->set_context($context);
+//$PAGE->set_context(context_system::instance());
 $PAGE->set_url(constants::M_ROOT .'/cloudpoodll.php');
 $PAGE->set_cacheable(false);
 $title = '';
@@ -44,7 +44,7 @@ if (isset($cm->name)) {
     $title = $cm->name;
 }
 $PAGE->set_title($title);
-//$PAGE->set_heading($title);
+$PAGE->set_heading($title);
 
 // Reset page layout for inside editor.
 $PAGE->set_pagelayout('embedded');
@@ -69,7 +69,7 @@ $PAGE->requires->strings_for_js(array_keys($strings), constants::M_COMPONENT );
 
 $output = $PAGE->get_renderer(constants::M_COMPONENT);
 
-echo $output->header();
+echo $OUTPUT->header();
 echo $output->render_scripts();
 
 echo $output->footer();
