@@ -36,8 +36,8 @@ list($context, $course, $cm) = get_context_info_array($contextid);
 require_login();
 require_sesskey();
 
-//$PAGE->set_context($context);
-$PAGE->set_context(context_system::instance());
+$PAGE->set_context($context);
+//$PAGE->set_context(context_system::instance());
 $PAGE->set_url(constants::M_ROOT .'/cloudpoodll.php');
 $PAGE->set_cacheable(false);
 $title = '';
@@ -69,5 +69,5 @@ $PAGE->requires->strings_for_js(array_keys($strings), constants::M_COMPONENT );
 
 $output = $PAGE->get_renderer(constants::M_COMPONENT);
 echo $output->render_scripts();
-echo $OUTPUT->header();
-echo $OUTPUT->footer();
+echo $output->header();
+echo $output->footer();
