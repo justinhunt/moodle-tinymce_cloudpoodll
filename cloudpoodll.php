@@ -47,7 +47,7 @@ if (isset($cm->name)) {
 
 // Reset page layout for inside editor.
 $PAGE->set_pagelayout('embedded');
-$PAGE->set_title($title);
+$PAGE->set_title("Cloud Poodll");
 //$PAGE->set_heading($title);
 
 $PAGE->requires->css(new moodle_url($CFG->wwwroot. constants::M_ROOT  .'/tinymce/css/style.css'));
