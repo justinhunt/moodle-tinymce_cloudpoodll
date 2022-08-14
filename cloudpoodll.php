@@ -35,7 +35,8 @@ list($context, $course, $cm) = get_context_info_array($contextid);
 require_login($course, false, $cm);
 require_sesskey();
 
-$PAGE->set_context($context);
+//$PAGE->set_context($context);
+$PAGE->set_context(context_system::instance());
 $PAGE->set_url(constants::M_ROOT .'/cloudpoodll.php');
 $PAGE->set_cacheable(false);
 $title = '';
